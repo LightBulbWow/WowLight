@@ -6,25 +6,18 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.user.bdulgi.Bdulgi">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-
-            <TextView
-                android:layout_width="wrap_content"
+            <include
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Expense Management"
-                android:id="@+id/textView2"
-                android:textSize="27dp"
-                android:layout_alignBottom="@+id/edit_add"
-                android:layout_toLeftOf="@+id/edit_add"
-                android:layout_toStartOf="@+id/edit_add"
-                android:layout_alignParentTop="true" />
+                layout="@layout/toolbar_layout"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -39,9 +32,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/listView"
-                android:layout_below="@+id/textView2"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/edit_add" />
         </RelativeLayout>
 
 

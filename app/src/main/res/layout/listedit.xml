@@ -2,61 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_layout"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/fice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right|center_vertical" />
+
+</FrameLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="522dp">
+        android:layout_height="match_parent">
 
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:background="#343434" />
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=" Expense Application"
-            android:id="@+id/textView3"
-            android:textColor="#FFFFFF"
-            android:textSize="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@+id/progressBar" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:src="@drawable/fice"
-            android:layout_alignBottom="@+id/progressBar"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/back1"
-            android:src="@drawable/six"
-            android:layout_alignTop="@+id/imageButton2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="false" />
+
+
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText3"
+            android:hint="어디서"
             android:layout_below="@+id/use_save"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="us" />
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,15 +48,15 @@
             android:text="Use"
             android:id="@+id/use_save"
             android:textSize="25dp"
-            android:layout_below="@+id/back1"
-            android:layout_alignRight="@+id/back1"
-            android:layout_alignEnd="@+id/back1" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Price"
+
             android:id="@+id/textView5"
             android:layout_below="@+id/editText3"
             android:layout_alignParentLeft="true"
@@ -83,11 +66,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/price_save"
+            android:hint="얼마"
             android:layout_below="@+id/textView5"
-            android:layout_alignRight="@+id/imageButton2"
-            android:layout_alignEnd="@+id/imageButton2"
-            android:layout_alignLeft="@+id/imageButton2"
-            android:layout_alignStart="@+id/imageButton2" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/When_save"
+            android:layout_toEndOf="@+id/When_save" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -103,6 +87,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:id="@+id/When_save"
+            android:hint="언제"
             android:layout_below="@+id/textView6"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -121,11 +106,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/brief_save"
+            android:hint="어떻게"
             android:layout_below="@+id/textView7"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/price_save"
-            android:layout_alignEnd="@+id/price_save" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"

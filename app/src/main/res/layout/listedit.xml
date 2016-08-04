@@ -136,7 +136,8 @@
             android:id="@+id/account_save"
             android:layout_below="@+id/textView8"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:layout_width="wrap_content"

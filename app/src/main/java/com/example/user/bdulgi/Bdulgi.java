@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -25,8 +24,8 @@ public class Bdulgi extends AppCompatActivity {
         setContentView(R.layout.activity_bdulgi);
 
 
-        editText = (EditText)findViewById(R.id.id);
-        password = (EditText)findViewById(R.id.password);
+        editText = (EditText) findViewById(R.id.id);
+        password = (EditText) findViewById(R.id.password);
 
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(editText, InputMethodManager.SHOW_FORCED);
@@ -36,9 +35,9 @@ public class Bdulgi extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
 
-                public void onClick (View view) {
+            public void onClick(View view) {
                 if (!TextUtils.isEmpty(editText.getText())
-                       && !TextUtils.isEmpty(password.getText())) {
+                        && !TextUtils.isEmpty(password.getText())) {
                     Intent intent = new Intent(getApplicationContext(), Bdulgi_List.class);
                     startActivity(intent);
                 }
@@ -61,20 +60,6 @@ public class Bdulgi extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-            return super.onOptionsItemSelected(item);
-            }
 }
 
 

@@ -21,6 +21,7 @@
         <activity android:name=".Bdulgi_List"></activity>
         <activity android:name=".Bdulgi_List_edit"></activity>
         <activity android:name=".Bdulgi_details"></activity>
+        <activity android:name=".ViewExpense"></activity>
     </application>
 
 </manifest>

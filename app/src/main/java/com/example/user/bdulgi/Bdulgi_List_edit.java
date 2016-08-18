@@ -169,10 +169,15 @@ public class Bdulgi_List_edit extends AppCompatActivity implements onNetworkResp
             {
                 Toast.makeText(this, "보내기 성공", Toast.LENGTH_SHORT).show();
                 if(!TextUtils.isEmpty(response.getString("EXPENSE_SEQ"))){
-                    Intent intent = new Intent(Bdulgi_List_edit.this, Bdulgi_List.class);
-                    intent.putExtra("EXPENSE_SEQ", response.getString("EXPENSE_SEQ"));
-                    startActivity(intent);
+                    //Intent intent = new Intent(Bdulgi_List_edit.this, Bdulgi_List.class);
+                    //intent.putExtra("EXPENSE_SEQ", response.getString("EXPENSE_SEQ"));
+                    //startActivity(intent);
+
+                    Intent Go = new Intent(Bdulgi_List_edit.this, ViewExpense.class);
+                    Go.putExtra("EXPENSE_SEQ", response.getString("EXPENSE_SEQ"));
+                    startActivity(Go);
                     finish();
+
                 }
             }
 
